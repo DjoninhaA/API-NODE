@@ -8,9 +8,12 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3001", 
-    methods: "GET, POST, PUT, DELETE", 
-    allowedHeaders: "Content-Type, Authorization", 
+    origin: [
+      "http://localhost:3001",
+      "https://front-cadastro-green.vercel.app",
+    ],
+    methods: "GET, POST, PUT, DELETE",
+    allowedHeaders: "Content-Type, Authorization",
   })
 );
 
